@@ -1,3 +1,9 @@
-.container-cards {
-  background-color: none;
+.background {
+  background-color: whitesmoke;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
 }

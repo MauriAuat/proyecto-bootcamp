@@ -1,9 +1,9 @@
 import React from 'react'
-import './styles/searching-bar.css'
+import './styles/header.css'
 import logo from './images/LOGO MARVEL.jpg'
 const Header =(props)=>{
     return(
-        <div className="container">
+        <div className="container-header">
             <img src={logo} alt= "Imagen Marvel" className="image"/>
             <form className= "searchingNav">
                 <input type="text" className= "input" placeholder="Input character"></input>

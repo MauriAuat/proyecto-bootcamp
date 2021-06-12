@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Cards from './components/Modals/cards';
-import Header from './components/Searching-bar.js';
+import Header from './components/Header.js'
 
 
 function App() {
@@ -29,6 +29,8 @@ function App() {
       <Header />
       {/* <p>{char[1].name}</p> */}
       <Cards />
+      
+      
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.container-card {
+  width: 295px;
+  height: 445px;
+  position: relative; /* para poder posicionar el texto de forma absoluta */
+  display: inline-block; /* para que solo ocupe el ancho de la imagen */
+
+  margin: 8px 0 31px 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  position: absolute;
+  bottom: 0;
+  right: 8rem;
+  color: lightyellow;
+  font-size: larger;
+}
