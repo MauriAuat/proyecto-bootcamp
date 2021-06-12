@@ -1,26 +1,34 @@
-import React, {useEffect} from 'react'
+import React from 'react';
 import './App.css';
-import Modals from './components/Modals';
+import Cards from './components/Modals/cards';
 import Header from './components/Searching-bar.js';
 
 
 function App() {
-  const hash= "41cd88a2c0ac24f09b136ff769461b9f";
-  // const [item, setItem] = useState(null);
+  // const hash= "41cd88a2c0ac24f09b136ff769461b9f";
+  // const [char, setChar] = useState([]);
 
-  useEffect(()=>{
-    getData()
-  },[]);
-  const getData = async ()=>{
-    const data = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=658e18f8683906f0d0b8faf4bc7cf703&hash=${hash}`
-      )
-      const characters = await data.json();
-      console.log(characters);
-  }
+  // useEffect(()=>{
+  //   getData();
+    
+  // },[]);
+
+  // console.log(char);
+  // const getData = async ()=>{
+  //   const data = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=658e18f8683906f0d0b8faf4bc7cf703&hash=${hash}`
+  //     )
+  //     const characters = await data.json();
+  //    // console.log(characters);compruebo que la informacion traída del fetch se guarde en characters
+  //     setChar(characters.data.results);//guardo como estado la informacion de los 20 primeros personajes
+  // }
+  
+  // const personaje =char;
+  // console.log(personaje[1].name)
   return (
     <div className="App">
       <Header />
-      <Modals />
+      {/* <p>{char[1].name}</p> */}
+      <Cards />
     </div>
   );
 }
