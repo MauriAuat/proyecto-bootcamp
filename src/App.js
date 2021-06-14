@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Cards from './components/Modals/cards';
 import Header from './components/Header.js'
+
 
 
 function App() {
@@ -24,13 +25,14 @@ function App() {
   
   // const personaje =char;
   // console.log(personaje[1].name)
+
+  const [search, setSearch] = useState('');
   return (
     <div className="App">
-      <Header />
-      {/* <p>{char[1].name}</p> */}
-      <Cards />
-      
-      
+      <Header finded={(s) => setSearch(s)}/>
+      {console.log(search)}
+      <Cards finded ={search}/>
+           
     </div>
   );
 }
