@@ -5,7 +5,7 @@ import IndividualCard from './individual-card.js';
 const Cards = ({ finded, onClickHandler }) => {
 	const hash = '41cd88a2c0ac24f09b136ff769461b9f';
 	const [char, setChar] = useState([]);
-	console.log(onClickHandler);
+
 	useEffect(() => {
 		const getData = async () => {
 			if (finded === '') {

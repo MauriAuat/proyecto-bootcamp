@@ -16,9 +16,11 @@ function App() {
 			<div className='App'>
 				<Header finded={(s) => setSearch(s)} />
 				<Switch>
-					<Route path='/:name'>
-						<Url />
-					</Route>
+					<Route
+						path='/:name'
+						render={(props) => (
+							<Url onClickHandler={() => setModal(true)} />
+						)}></Route>
 					<Route
 						path='/'
 						render={(props) => (
@@ -29,7 +31,7 @@ function App() {
 					</Route> */}
 				</Switch>
 			</div>
-			<Modal isOpen={modal} />
+			<Modal isOpen={modal} closeModal={() => setModal(false)} />
 		</Router>
 	);
 }

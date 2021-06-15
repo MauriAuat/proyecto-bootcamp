@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import {useParams,Link} from 'react-router-dom';
 import IndividualCard from './individual-card.js';
 
-const Url = () =>{
+const Url = ({onClickHandler}) =>{
 
   const {name} = useParams();
 
@@ -31,7 +31,7 @@ const Url = () =>{
 
 			{char.map((personaje) => (
 				
-<IndividualCard key={personaje.id} personaje={personaje} />
+<IndividualCard onClickHandler={onClickHandler} key={personaje.id} personaje={personaje} />
 	
 			))}
       

@@ -14,6 +14,7 @@
 	border-width: 5px;
 	border: inset;
 	border-bottom-width: thick;
+	cursor: pointer;
 }
 
 p {

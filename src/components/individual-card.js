@@ -6,8 +6,9 @@ const IndividualCard = ({personaje, onClickHandler}) =>{
 
     return(
 <div  className= "container-card" onClick={onClickHandler}>
-        <img   className= "imagen" src={personaje.thumbnail.path + "." + personaje.thumbnail.extension} alt={personaje.name}></img>
-        
+    <img   className= "imagen" src={personaje.thumbnail.path + "." + personaje.thumbnail.extension} alt={personaje.name}></img>
+       
+       
         <p   >{personaje.name}</p>
             
 </div>

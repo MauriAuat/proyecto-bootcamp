@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles/modal.css';
+
+
 const Modal = ({isOpen,closeModal}) => {
+
 
 
 		return (
@@ -16,7 +19,7 @@ const Modal = ({isOpen,closeModal}) => {
 						vitae enim incidunt porro fuga ea.
 					</p>
 				</div>
-        <button>CloseModal</button>
+        <button onClick={closeModal}>CloseModal</button>
 			</div>
 		);
 };

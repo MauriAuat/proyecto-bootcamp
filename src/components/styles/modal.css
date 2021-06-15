@@ -1,11 +1,17 @@
 .modal {
-	background: red;
+	background: rgba(0, 0, 0, 0.85);
 	display: none;
-	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
 }
 
 .open-modal {
 	display: flex;
+	height: 100vh;
 }
 /* body.active-modal {
 	overflow-y: hidden;
