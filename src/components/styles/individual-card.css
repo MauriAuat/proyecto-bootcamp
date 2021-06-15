@@ -1,25 +1,27 @@
 .container-card {
-  width: 295px;
-  height: 445px;
-  position: relative; /* para poder posicionar el texto de forma absoluta */
-  display: inline-block; /* para que solo ocupe el ancho de la imagen */
+	width: 295px;
+	height: 445px;
+	position: relative; /* para poder posicionar el texto de forma absoluta */
+	display: inline-block; /* para que solo ocupe el ancho de la imagen */
 
-  margin: 8px 0 31px 0;
+	margin: 8px 0 31px 0;
 }
 
 .imagen {
-  width: 100%;
-  height: 100%;
-  border-color: lightcyan;
-  border-width: 5px;
-  border: inset;
-  border-bottom-width: thick;
+	width: 100%;
+	height: 100%;
+	border-color: lightcyan;
+	border-width: 5px;
+	border: inset;
+	border-bottom-width: thick;
 }
 
 p {
-  position: absolute;
-  bottom: 0;
-  right: 8rem;
-  color: lightyellow;
-  font-size: larger;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: lightyellow;
+	font-size: larger;
+	width: 100%;
+	background: radial-gradient(black, transparent);
 }
