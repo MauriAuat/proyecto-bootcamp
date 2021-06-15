@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './styles/cards.css';
 import IndividualCard from './individual-card.js';
 
-const Cards = ({ finded }) => {
+const Cards = ({ finded, onClickHandler }) => {
 	const hash = '41cd88a2c0ac24f09b136ff769461b9f';
 	const [char, setChar] = useState([]);
-
+	console.log(onClickHandler);
 	useEffect(() => {
 		const getData = async () => {
 			if (finded === '') {
@@ -30,17 +30,15 @@ const Cards = ({ finded }) => {
 		};
 		getData();
 	}, [finded]);
-
+	// const [modal, setModal] = useState();
 	return (
 		<div className='background'>
-			{/* <h1>{input.input}</h1> */}
-			{/* {props.array.forEach(element => {
-            console.log(element);
-        })} */}
-			{/* {console.log(props.nombre)} */}
-
 			{char.map((personaje) => (
-				<IndividualCard key={personaje.id} personaje={personaje} />
+				<IndividualCard
+					onClickHandler={onClickHandler}
+					key={personaje.id}
+					personaje={personaje}
+				/>
 			))}
 		</div>
 	);

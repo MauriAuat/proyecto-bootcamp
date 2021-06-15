@@ -26,15 +26,17 @@ const Url = () =>{
 
 
   return(
+    <Link to={`/${name}`}>
 		<div className='background'>
 
 			{char.map((personaje) => (
-				<Link to={`/${personaje.name}`}>
-<IndividualCard key={personaje.id} personaje={personaje} />
-				</Link>
 				
+<IndividualCard key={personaje.id} personaje={personaje} />
+	
 			))}
+      
 		</div>
+    </Link>
   );
 };
 

@@ -16,7 +16,7 @@ const Modal = ({isOpen,closeModal}) => {
 						vitae enim incidunt porro fuga ea.
 					</p>
 				</div>
-        <button onClick={closeModal}>CloseModal</button>
+        <button>CloseModal</button>
 			</div>
 		);
 };
