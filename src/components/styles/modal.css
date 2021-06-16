@@ -7,8 +7,16 @@
 	z-index: 9999;
 	top: 0;
 	left: 0;
+	justify-content: center;
+	align-items: center;
 }
 
+.modal-content {
+	background: #dddd;
+	width: 300px;
+	height: 400px;
+	padding: 10px;
+}
 .open-modal {
 	display: flex;
 	height: 100vh;

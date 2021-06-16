@@ -11,6 +11,8 @@ function App() {
 
 	const [modal, setModal] = useState(false);
 
+	const [character, setCharacter] = useState([]);
+
 	return (
 		<Router>
 			<div className='App'>
@@ -19,19 +21,30 @@ function App() {
 					<Route
 						path='/:name'
 						render={(props) => (
-							<Url onClickHandler={() => setModal(true)} />
+							<Url
+								onClickHandler={() => setModal(true)}
+								fetchCharacter={(char) => setCharacter(char)}
+							/>
 						)}></Route>
 					<Route
 						path='/'
 						render={(props) => (
-							<Cards finded={search} onClickHandler={() => setModal(true)} />
+							<Cards
+								finded={search}
+								onClickHandler={() => setModal(true)}
+								fetchCharacter={(char) => setCharacter(char)}
+							/>
 						)}></Route>
 					{/* <Route path='/:name'>
 						<Cards finded={search} onClickHandler={(mod) => setModal(mod)} />
 					</Route> */}
 				</Switch>
 			</div>
-			<Modal isOpen={modal} closeModal={() => setModal(false)} />
+			<Modal
+				isOpen={modal}
+				closeModal={() => setModal(false)}
+				fetchCharacter={character}
+			/>
 		</Router>
 	);
 }

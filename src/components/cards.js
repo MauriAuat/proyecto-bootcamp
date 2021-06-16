@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './styles/cards.css';
 import IndividualCard from './individual-card.js';
 
-const Cards = ({ finded, onClickHandler }) => {
+const Cards = ({ finded, onClickHandler, fetchCharacter }) => {
 	const hash = '41cd88a2c0ac24f09b136ff769461b9f';
 	const [char, setChar] = useState([]);
 
@@ -38,6 +38,7 @@ const Cards = ({ finded, onClickHandler }) => {
 					onClickHandler={onClickHandler}
 					key={personaje.id}
 					personaje={personaje}
+					fetchCharacter={fetchCharacter}
 				/>
 			))}
 		</div>
