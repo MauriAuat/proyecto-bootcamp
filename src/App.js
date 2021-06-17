@@ -8,10 +8,8 @@ import Modal from './components/modal.js';
 
 function App() {
 	const [search, setSearch] = useState('');
-
-	const [modal, setModal] = useState(false);
-
-	const [character, setCharacter] = useState([]);
+	const [isOpenModal, setIsOpenModal] = useState(false);
+	const [character, setCharacter] = useState(null);
 
 	return (
 		<Router>
@@ -22,7 +20,7 @@ function App() {
 						path='/:name'
 						render={(props) => (
 							<Url
-								onClickHandler={() => setModal(true)}
+								onClickHandler={() => setIsOpenModal(true)}
 								fetchCharacter={(char) => setCharacter(char)}
 							/>
 						)}></Route>
@@ -31,20 +29,19 @@ function App() {
 						render={(props) => (
 							<Cards
 								finded={search}
-								onClickHandler={() => setModal(true)}
+								onClickHandler={() => setIsOpenModal(true)}
 								fetchCharacter={(char) => setCharacter(char)}
 							/>
 						)}></Route>
-					{/* <Route path='/:name'>
-						<Cards finded={search} onClickHandler={(mod) => setModal(mod)} />
-					</Route> */}
 				</Switch>
+				{isOpenModal && character && (
+					<Modal
+						isOpen={isOpenModal}
+						closeModal={() => setIsOpenModal(false)}
+						character={character}
+					/>
+				)}
 			</div>
-			<Modal
-				isOpen={modal}
-				closeModal={() => setModal(false)}
-				fetchCharacter={character}
-			/>
 		</Router>
 	);
 }

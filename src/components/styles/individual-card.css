@@ -17,7 +17,7 @@
 	cursor: pointer;
 }
 
-p {
+.character-name {
 	position: absolute;
 	bottom: 0;
 	text-align: center;

@@ -9,7 +9,7 @@ const Header = ({ finded }) => {
 		setInput(event.target.value);
 		finded(event.target.value);
 	};
-	// console.log(input);
+
 	return (
 		<div className='container-header'>
 			<img src={logo} alt='Imagen Marvel' className='image' />
@@ -20,7 +20,6 @@ const Header = ({ finded }) => {
 					className='input'
 					value={input}
 					placeholder='Choose a character...'></input>
-				{/* <button  onChange={handleChange} className="btn">Search</button> */}
 			</form>
 		</div>
 	);
