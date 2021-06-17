@@ -1,0 +1,9 @@
+.image-container {
+	width: 100%;
+	display: flex;
+}
+.image-comic {
+	min-width: 106px;
+	height: 113px;
+	margin-bottom: 10px;
+}

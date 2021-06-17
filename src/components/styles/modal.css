@@ -1,0 +1,84 @@
+.modal {
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background: white;
+	display: flex;
+	width: 344px;
+	height: 459px;
+	padding: 10px;
+	flex-direction: column;
+	align-items: flex-end;
+	overflow: scroll;
+	margin: 25px auto;
+	border: 1px solid #989595;
+	border-width: revert;
+	border-radius: 14px 14px 7px 14px;
+}
+.modal-content::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+.modal-content::-webkit-scrollbar:vertical {
+	width: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+	background-color: #797979;
+	border-radius: 20px 20px 20px 20px;
+	border: 2px solid #f1f2f3;
+}
+
+.modal-content::-webkit-scrollbar-track {
+	border-radius: 3px 14px 10px 10px;
+	margin-top: 39px;
+	margin-bottom: 7px;
+}
+
+.open-modal {
+	display: grid;
+	height: 100vh;
+}
+
+.title {
+	width: 100%;
+	margin: 12px 0 1px 0px;
+	justify-content: center;
+}
+.subtitle {
+	margin: 30px 79px 0px 0px;
+}
+.comic-list {
+	padding-right: 205px;
+	padding-bottom: 8px;
+	font-style: oblique;
+	font-family: -webkit-body;
+	text-decoration: underline;
+	text-decoration-style: unset;
+}
+.close-button {
+	content: 'x';
+	color: grey;
+	background: red;
+	box-sizing: content-box;
+	height: 14px;
+	width: 7px;
+	font-weight: 300;
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+}
+.info-comic {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+}
