@@ -3,7 +3,7 @@ import './styles/modal.css';
 import Comic from './comics';
 
 const Modal = ({ isOpen, closeModal, character }) => {
-	const hash = '41cd88a2c0ac24f09b136ff769461b9f';
+	const hash = '790a74f4384888f375e4dc17bec6a2d4';
 
 	const handleModalDialogueClick = (e) => {
 		e.stopPropagation();
@@ -14,7 +14,7 @@ const Modal = ({ isOpen, closeModal, character }) => {
 	useEffect(() => {
 		const getData = async () => {
 			const data = await fetch(
-				`https://gateway.marvel.com:443/v1/public/characters/${character.id}/comics?ts=1&apikey=658e18f8683906f0d0b8faf4bc7cf703&hash=${hash}`
+				`https://gateway.marvel.com:443/v1/public/characters/${character.id}/comics?ts=1&apikey=eae7769f2bafe26a05430172ae6db23d&hash=${hash}`
 			);
 			const allcomics = await data.json();
 			setComics(allcomics.data.results);
