@@ -33,93 +33,103 @@ Proyecto final del buscador de personajes de la API de marvel para el bootcamp d
  
  Realizados enteramente con archivos .css
  
+ # Estructura
+ 
+ `Todos los componentes a excepción del componente App estan guardados en la carpeta components, en donde se almacenan dos subcarpetas mas, una (llamada styles) con los archivos de estilo de cada uno de los componentes y otra (llamada images) con la imagen del logo de Marvel`
+ 
  # dependencies  usadas:
 
  react-router-dom
  
+    BrowserRouter as Router, 
+    Switch, 
+    Route
+    useParams
+    
  # Hooks utilizados: 
  
  useState
  
  useEffect
- 
- useParams
+  
  
  # Funcionalidades faltantes:
  
  Componente para guardar búsquedas y cards en favoritos.
  
+ Falto realizar los test Unitarios
+ 
  # Fallas que se deben optimizar:
  
-  ## La busqueda del personaje solo es posible desde pagina de inicio, si la Url cambia, la función de búsqueda deja de funcionar
+  ### La busqueda del personaje solo es posible desde pagina de inicio, si la Url cambia, la función de búsqueda deja de funcionar
   
-  ## Cuando se realiza un busqueda sin resultados o se muestra un modal con información faltante, debería haber un texto alternativo en el del componente con la información inexistente
+  ### Cuando se realiza un busqueda sin resultados o se muestra un modal con información faltante, debería haber un texto alternativo en el del componente con la información inexistente
   
-  ## La busqueda por Url debería usar query strings y realizar busquedas combinadas, el componente url solo funciona agregando el nombre del personaje al lado del url de inicio
- 
-  ## 
+  ### La busqueda por Url debería usar query strings y realizar busquedas combinadas, el componente url solo funciona agregando el nombre del personaje al lado del url de inicio
   
- # Pull Request:
+  ### El diseño responsive puede mejorarse mucho aún
+
+# Pull Request:
  
   ## PR layout buscador
   
-     `Commits:`
+  ### Commits:
      
-   ###  layout buscador: 98527cd69ceb7a0a36acc8a67b02ab8d35c06f1a
+  ####  layout buscador: 98527cd69ceb7a0a36acc8a67b02ab8d35c06f1a
      
        creacion del Componente buscador
        
-   ###  prueba de fetch e impresion por consola: dcbb08fc54e7c83ccc45ee407e226e2f5f56a7a2
+  ####  prueba de fetch e impresion por consola: dcbb08fc54e7c83ccc45ee407e226e2f5f56a7a2
        
        conexión con la API de Marvel 
        
   ## PR dudas con el paso de props
-  
-   ###  dudas con el paso de props: 98527cd69ceb7a0a36acc8a67b02ab8d35c06f1a
+     
+   ### Commits
+       
+   ####  dudas con el paso de props: 98527cd69ceb7a0a36acc8a67b02ab8d35c06f1a
    
        creacion del componente Cards e inconvenientes a la hora de pasar la info de la API como props
        
-   ### Initial Page with 20 characters: 74ff309dfec3a98a8845a08cd107f7cb09381e9d
+   #### Initial Page with 20 characters: 74ff309dfec3a98a8845a08cd107f7cb09381e9d
     
        creacion del componente  IndividualCard y renderizado de los 20 personajes en el componente contenedor Card de cada componente IndividualCard
        
        Agregado de estilos a los componentes creados
        
-   ### searching success: 0424a614631109acef4446f83dd14650c0f16632
+   #### searching success: 0424a614631109acef4446f83dd14650c0f16632
    
         Prueba y funcionamiento correcto de la busqueda de personajes y renderizado de sus cards.
-        
-        
-   ### url search and starting modals: 47d7473cfa8fe809ec5b2688869a5f623ef74557
+         
+   #### url search and starting modals: 47d7473cfa8fe809ec5b2688869a5f623ef74557
    
        Creacion de componente Url para realizar busquedas desde la barra de navegacion
        
         Agregado de estilos a los componentes creados
        
-   ### modal opening: 493516cf9f10cffb27664fc86abbbc8fc2c194bb
+   #### modal opening: 493516cf9f10cffb27664fc86abbbc8fc2c194bb
    
-      Agregado de react router dom
+       Agregado de react router dom
       
-      Configurando evento onClick para abrir el modal
+       Configurando evento onClick para abrir el modal
+          
+   #### modal closing: 387d4c7d2ab7664760b251ed4245bd199bfd2d3d
       
+       Configurando evento onClick para cerrar el modal
       
-   ### modal closing: 387d4c7d2ab7664760b251ed4245bd199bfd2d3d
-      
-      Configurando evento onClick para cerrar el modal
-      
-      Agregado de estilos al componente Modal
+       Agregado de estilos al componente Modal
        
-   ### comic and character info inside Modal: a6f675ec3fcaec0ad0114f90bae14f3a9935471e
+   #### comic and character info inside Modal: a6f675ec3fcaec0ad0114f90bae14f3a9935471e
    
-      Optimizando el renderizado del componente comic y las props del caracter dentro del componente Modal
+       Optimizando el renderizado del componente comic y las props del caracter dentro del componente Modal
       
-      Mejorando estilos de componentes
+       Mejorando estilos de componentes
       
-   ### Modal Completed: a6f675ec3fcaec0ad0114f90bae14f3a9935471e
+   #### Modal Completed: a6f675ec3fcaec0ad0114f90bae14f3a9935471e
    
-      Renderizado del con la info dentro del Modal funcionando correctamente
+       Renderizado del con la info dentro del Modal funcionando correctamente
       
-     Último commit con los cambios actualizados al momento de deployar el proyecto
+        Último commit con los cambios actualizados al momento de deployar el proyecto
    
      
     
