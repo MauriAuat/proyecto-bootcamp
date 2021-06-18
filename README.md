@@ -2,6 +2,8 @@
 
 Proyecto final del buscador de personajes de la API de marvel para el bootcamp de Leniolabs
 
+# AUTOR: Mauricio Auat
+
 # Funcionalidades
 
  ## Componente Header: 
