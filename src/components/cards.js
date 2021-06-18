@@ -3,14 +3,14 @@ import './styles/cards.css';
 import IndividualCard from './individual-card.js';
 
 const Cards = ({ finded, onClickHandler, fetchCharacter }) => {
-	const hash = '41cd88a2c0ac24f09b136ff769461b9f';
+	const hash = '790a74f4384888f375e4dc17bec6a2d4';
 	const [char, setChar] = useState([]);
 
 	useEffect(() => {
 		const getData = async () => {
 			if (finded === '') {
 				const data = await fetch(
-					`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=658e18f8683906f0d0b8faf4bc7cf703&hash=${hash}`
+					`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=eae7769f2bafe26a05430172ae6db23d&hash=${hash}`
 				);
 				const characters = await data.json();
 				// console.log(characters);compruebo que la informacion traída del fetch se guarde en characters
@@ -18,7 +18,7 @@ const Cards = ({ finded, onClickHandler, fetchCharacter }) => {
 				setChar(characters.data.results); //guardo como estado la informacion de los 20 primeros personajes
 			} else {
 				const data = await fetch(
-					`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${finded}&ts=1&apikey=658e18f8683906f0d0b8faf4bc7cf703&hash=${hash}`
+					`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${finded}&ts=1&apikey=eae7769f2bafe26a05430172ae6db23d&hash=${hash}`
 				);
 				const characters = await data.json();
 				setChar(characters.data.results);
